@@ -13,8 +13,11 @@
                 <p class="header">CPU</p>
                 <div class="info">
                     <p>Temp: <span id="cpu-temp"></span>&deg;C</p>
-                    <p>Percentage: <span id="cpu-percent"></span>%</p>
                     <p>Cores: <span id="cpu-cores"></span></p>
+                    <p>Percentage: <span id="cpu-percent"></span>%</p>
+                    <div class="bar">
+                        <div id="progress-cpu"></div>
+                    </div>
                 </div>
             </div>
             <div class="card">
@@ -23,6 +26,9 @@
                     <p>Total: <span id="ram-total"></span>GB</p>
                     <p>Used: <span id="ram-used"></span>GB</p>
                     <p>Percentage: <span id="ram-percent"></span>%</p>
+                    <div class="bar">
+                        <div id="progress-ram"></div>
+                    </div>
                 </div>
             </div>
             <div class="card">
@@ -31,6 +37,9 @@
                     <p>Total: <span id="disk-total"></span>GB</p>
                     <p>Used: <span id="disk-used"></span>GB</p>
                     <p>Percentage: <span id="disk-percent"></span>%</p>
+                    <div class="bar">
+                        <div id="progress-disk"></div>
+                    </div>
                 </div>
             </div>
         </div>

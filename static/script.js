@@ -10,13 +10,21 @@ const diskTotal = document.getElementById("disk-total");
 const diskUsed = document.getElementById("disk-used");
 const diskPercent = document.getElementById("disk-percent");
 
+const progressCpu = document.getElementById("progress-cpu");
+const progressRam = document.getElementById("progress-ram");
+const progressDisk = document.getElementById("progress-disk");
+
+function updateProgress(progress, percent) {
+    progress.style.width = percent + "%";
+}
+
 async function fetchStats() {
     const response = await fetch("/stats");
     const data = await response.json();
 
     cpuTemp.innerHTML = data.cpu.temp_celsius;
-    cpuPercent.innerHTML = data.cpu.percent;
     cpuCores.innerHTML = data.cpu.cores;
+    cpuPercent.innerHTML = data.cpu.percent;
 
     ramTotal.innerHTML = data.ram.total_gb;
     ramUsed.innerHTML = data.ram.used_gb;
@@ -25,6 +33,12 @@ async function fetchStats() {
     diskTotal.innerHTML = data.disk.total_gb;
     diskUsed.innerHTML = data.disk.used_gb;
     diskPercent.innerHTML = data.disk.percent;
+
+
+    updateProgress(progressCpu, data.cpu.percent);
+    updateProgress(progressRam, data.ram.percent);
+    updateProgress(progressDisk, data.disk.percent);
+
 }
 
 setInterval(fetchStats, 2000);

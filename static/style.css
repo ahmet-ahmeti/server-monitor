@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(27, 27, 27);
+    background-color: black;
 }
 
 #main {
@@ -24,23 +24,23 @@ body {
 
 .card {
     position: relative;
-    height: 25rem;
+    height: 15rem;
     width: 28rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align:start;
-    background-color: rgb(40, 40, 40);
+    background-color: black;
     color: rgb(230, 230, 230);
-    border: 2px solid rgb(80, 80, 80);
-    border-radius: 4.5rem;
+    border: 0.3rem solid rgb(230, 230, 230);
+    border-bottom: 2rem solid rgb(230, 230, 230);
 }
 
 .header {
     font-size: 3rem;
     position: absolute;
-    top: 2.5rem;
+    top: 1rem;
     left: 4rem;
 }
 
@@ -50,10 +50,39 @@ body {
     align-items: flex-start;
     width: 70%;
     justify-content: space-evenly;
-    font-size: 2rem;
+    font-size: 1.5rem;
     height: 15rem;
     margin-top: 4rem;
+    margin-bottom: 2rem;
 }
+
+.bar {
+    position: absolute;
+    bottom: 1rem;
+    height: 10px;
+    width: 70%;
+    border: 1px solid white;
+}
+
+#progress-cpu {
+    background-color: white;
+    height: 10px;
+}
+
+#progress-cpu.active {
+    width: 0;
+}
+
+#progress-ram {
+    background-color: white;
+    height: 10px;
+}
+
+#progress-disk {
+    background-color: white;
+    height: 10px;
+}
+
 
 @media(max-width: 1500px) {
     #main {
@@ -66,9 +95,6 @@ body {
         row-gap: 4rem;
     }
 
-    .card {
-        border-radius: 5rem;
-    }   
 }
 
 @media(max-width: 700px) {
@@ -84,7 +110,6 @@ body {
 
     .card {
         width: 88vw;
-        border-radius: 5rem;
     }
 
 }
