@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor</title>
+</head>
+<body>
+    <main id="main">
+        <div id="grid">
+            <div class="card">
+                <p class="header">CPU</p>
+                <div class="info">
+                    <p>Temp: <span id="cpu-temp"></span>&deg;C</p>
+                    <p>Percentage: <span id="cpu-percent"></span>%</p>
+                    <p>Cores: <span id="cpu-cores"></span></p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="header">RAM</p>
+                <div class="info">
+                    <p>Total: <span id="ram-total"></span>GB</p>
+                    <p>Used: <span id="ram-used"></span>GB</p>
+                    <p>Percentage: <span id="ram-percent"></span>%</p>
+                </div>
+            </div>
+            <div class="card">
+                <p class="header">DISK</p>
+                <div class="info">
+                    <p>Total: <span id="disk-total"></span>GB</p>
+                    <p>Used: <span id="disk-used"></span>GB</p>
+                    <p>Percentage: <span id="disk-percent"></span>%</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

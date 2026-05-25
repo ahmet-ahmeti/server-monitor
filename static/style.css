@@ -1,0 +1,90 @@
+* {
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(27, 27, 27);
+}
+
+#main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 3rem;
+}
+
+.card {
+    position: relative;
+    height: 25rem;
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:start;
+    background-color: rgb(40, 40, 40);
+    color: rgb(230, 230, 230);
+    border: 2px solid rgb(80, 80, 80);
+    border-radius: 4.5rem;
+}
+
+.header {
+    font-size: 3rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 4rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    height: 15rem;
+    margin-top: 4rem;
+}
+
+@media(max-width: 1500px) {
+    #main {
+        height: fit-content;
+    }
+
+    #grid {
+        margin: 4rem 0;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 4rem;
+    }
+
+    .card {
+        border-radius: 5rem;
+    }   
+}
+
+@media(max-width: 700px) {
+    #main {
+        height: fit-content;
+    }
+
+    #grid {
+        margin: 4rem 0;
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+
+    .card {
+        width: 88vw;
+        border-radius: 5rem;
+    }
+
+}
