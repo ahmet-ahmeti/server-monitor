@@ -13,9 +13,11 @@ def stats():
     cpu_temp = None
 
     try:
+        # for x86 architecture
         temps = psutil.sensors_temperatures()
         if "coretemp" in temps:
             cpu_temp = temps["coretemp"][0].current
+        # for ARM architecture
         elif "cpu_thermal" in temps:
             cpu_temp = temps["cpu_thermal"][0].current
     except AttributeError:

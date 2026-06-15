@@ -14,11 +14,13 @@ const progressCpu = document.getElementById("progress-cpu");
 const progressRam = document.getElementById("progress-ram");
 const progressDisk = document.getElementById("progress-disk");
 
+// for "progress bar" that measures percentage
 function updateProgress(progress, percent) {
     progress.style.width = percent + "%";
 }
 
 async function fetchStats() {
+    // fetches jsons from /stats
     const response = await fetch("/stats");
     const data = await response.json();
 

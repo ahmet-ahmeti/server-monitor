@@ -83,7 +83,7 @@ body {
     height: 10px;
 }
 
-
+/* 2 column layout for tablets */
 @media(max-width: 1500px) {
     #main {
         height: fit-content;
@@ -95,8 +95,12 @@ body {
         row-gap: 4rem;
     }
 
+    .card {
+        width: 40vw;
+    }
 }
 
+/* 1 coulumn layout for phones */
 @media(max-width: 700px) {
     #main {
         height: fit-content;
@@ -111,5 +115,4 @@ body {
     .card {
         width: 88vw;
     }
-
 }
