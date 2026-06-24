@@ -69,10 +69,6 @@ body {
     height: 10px;
 }
 
-#progress-cpu.active {
-    width: 0;
-}
-
 #progress-ram {
     background-color: white;
     height: 10px;
